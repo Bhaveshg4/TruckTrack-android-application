@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Companylogin extends StatelessWidget {
-  const Companylogin({super.key});
+class Driverpage extends StatelessWidget {
+  const Driverpage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class Companylogin extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.purple[400],
         title: const Text(
-          "Company's Desk",
+          "Driver's Desk",
           style: TextStyle(color: Color.fromARGB(255, 240, 233, 241)),
         ),
       ),

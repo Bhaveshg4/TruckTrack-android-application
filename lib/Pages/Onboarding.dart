@@ -1,5 +1,5 @@
-import 'package:bus_track_1/Pages/Companylogin.dart';
-import 'package:bus_track_1/Pages/Driverlogin.dart';
+import 'package:bus_track_1/Pages/Companypage.dart';
+import 'package:bus_track_1/Pages/Driverpage.dart';
 import 'package:flutter/material.dart';
 
 class Onboarding extends StatelessWidget {
@@ -154,7 +154,7 @@ class Onboarding extends StatelessWidget {
                       Color.fromARGB(255, 126, 81, 179)
                     ]),
                     borderRadius: BorderRadius.circular(20)),
-                height: 390,
+                height: 370,
                 width: double.infinity,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -170,7 +170,7 @@ class Onboarding extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Driverlogin()));
+                                  builder: (context) => Driverpage()));
                         },
                         child: Container(
                           alignment: Alignment.center,
@@ -197,7 +197,7 @@ class Onboarding extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Companylogin()));
+                                  builder: (context) => Companypage()));
                         },
                         child: Container(
                           alignment: Alignment.center,
