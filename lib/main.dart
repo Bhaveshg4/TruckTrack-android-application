@@ -1,4 +1,4 @@
-import 'package:bus_track_1/Pages/Onboarding.dart';
+import 'package:bus_track_1/CoverPages/Onboarding.dart';
 import 'package:flutter/material.dart';
 
 void main() {
