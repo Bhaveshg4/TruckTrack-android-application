@@ -1,3 +1,7 @@
+import 'package:bus_track_1/InsidePages/Driver/emergency.dart';
+import 'package:bus_track_1/InsidePages/Driver/payment.dart';
+import 'package:bus_track_1/InsidePages/Driver/requestfood.dart';
+import 'package:bus_track_1/InsidePages/Driver/uploadreceipt.dart';
 import 'package:flutter/material.dart';
 
 class Driverpage extends StatelessWidget {
@@ -21,7 +25,6 @@ class Driverpage extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 40),
-
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -76,7 +79,6 @@ class Driverpage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-              // GridView with 2 columns
               GridView.count(
                 shrinkWrap: true,
                 crossAxisCount: 2,
@@ -86,18 +88,41 @@ class Driverpage extends StatelessWidget {
                   buildGridItem(
                     imagePath: "assets/upishowreel.jpeg",
                     text: "Payment Gateway",
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Payment()));
+                    },
                   ),
                   buildGridItem(
                     imagePath: "assets/emergency.jpeg",
                     text: "Emergency Help!",
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => EmergencyServices()));
+                    },
                   ),
                   buildGridItem(
                     imagePath: "assets/upload.jpeg",
                     text: "Upload receipt",
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => UploadReceipt()));
+                    },
                   ),
                   buildGridItem(
                     imagePath: "assets/food.jpeg",
                     text: "Request meal",
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  RequestFood())); // Replace '/request_meal' with your actual path
+                    },
                   ),
                 ],
               ),
@@ -152,33 +177,39 @@ class Driverpage extends StatelessWidget {
     );
   }
 
-  Widget buildGridItem({required String imagePath, required String text}) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.purple[300],
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            alignment: Alignment.center,
-            width: 120,
-            height: 100,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image.asset(
-                imagePath,
-                fit: BoxFit.fill,
+  Widget buildGridItem(
+      {required String imagePath,
+      required String text,
+      required VoidCallback onTap}) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.purple[300],
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              alignment: Alignment.center,
+              width: 120,
+              height: 100,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.asset(
+                  imagePath,
+                  fit: BoxFit.fill,
+                ),
               ),
             ),
-          ),
-          SizedBox(height: 10),
-          Text(
-            text,
-            style: TextStyle(color: Colors.white, fontSize: 20),
-          ),
-        ],
+            SizedBox(height: 10),
+            Text(
+              text,
+              style: TextStyle(color: Colors.white, fontSize: 20),
+            ),
+          ],
+        ),
       ),
     );
   }
