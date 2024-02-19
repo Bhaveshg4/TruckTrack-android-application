@@ -39,7 +39,7 @@ class Companypage extends StatelessWidget {
                       height: 10,
                     ),
                     Text(
-                      "Know tracking info..",
+                      "Know about tracking info..",
                       style: TextStyle(
                         color: Colors.purpleAccent,
                         fontSize: 30,
@@ -53,11 +53,11 @@ class Companypage extends StatelessWidget {
                 child: Row(
                   children: [
                     buildFeatureContainer(
-                      imagePath: "assets/truck1.jpeg",
-                      description: "Track your truck anytime anywhere",
+                      imagePath: "assets/contact.jpg",
+                      description: "Keep in touch with your truck 24x7",
                     ),
                     buildFeatureContainer(
-                      imagePath: "assets/truck1.jpeg",
+                      imagePath: "assets/onboardpic.jpeg",
                       description: "Live GPS coordinates of your vehicle",
                     ),
                     buildFeatureContainer(
@@ -77,20 +77,20 @@ class Companypage extends StatelessWidget {
                 mainAxisSpacing: 8.0,
                 children: [
                   buildGridItem(
-                    imagePath: "assets/truck1.jpeg",
-                    text: "Text 1",
+                    imagePath: "assets/onboardpic.jpeg",
+                    text: "Track",
                   ),
                   buildGridItem(
-                    imagePath: "assets/truck1.jpeg",
-                    text: "Text 2",
+                    imagePath: "assets/contact.jpg",
+                    text: "Contact Driver",
                   ),
                   buildGridItem(
-                    imagePath: "assets/truck1.jpeg",
-                    text: "Text 2",
+                    imagePath: "assets/message.jpg",
+                    text: "Leave message",
                   ),
                   buildGridItem(
-                    imagePath: "assets/truck1.jpeg",
-                    text: "Text 2",
+                    imagePath: "assets/approve.jpg",
+                    text: "View Requests",
                   ),
                 ],
               ),
@@ -172,7 +172,7 @@ class Companypage extends StatelessWidget {
           SizedBox(height: 10),
           Text(
             text,
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white, fontSize: 20),
           ),
         ],
       ),
