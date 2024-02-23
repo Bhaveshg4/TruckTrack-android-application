@@ -38,7 +38,7 @@ class UploadReceipt extends StatelessWidget {
               icon: Icon(Icons.cloud_upload),
               label: Text("Upload Receipt"),
               style: ElevatedButton.styleFrom(
-                primary: Colors.purple[400],
+                backgroundColor: Colors.purple[400],
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               ),
             ),
@@ -53,7 +53,7 @@ class UploadReceipt extends StatelessWidget {
                 style: TextStyle(fontSize: 16),
               ),
               style: ElevatedButton.styleFrom(
-                primary: Colors.green,
+                backgroundColor: Colors.green,
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
               ),
             ),

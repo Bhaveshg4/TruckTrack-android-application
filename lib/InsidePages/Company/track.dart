@@ -65,7 +65,7 @@ class _TrackState extends State<Track> {
                 // Implement navigation to detailed tracking page
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.purple[400],
+                backgroundColor: Colors.purple[400],
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
@@ -87,7 +87,7 @@ class _TrackState extends State<Track> {
             ElevatedButton(
               onPressed: _updateLocation,
               style: ElevatedButton.styleFrom(
-                primary: Colors.blue,
+                backgroundColor: Colors.blue,
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
@@ -111,7 +111,7 @@ class _TrackState extends State<Track> {
                 // Implement additional action
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.orange,
+                backgroundColor: Colors.orange,
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),

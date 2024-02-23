@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "231523129407",
+    "project_id": "trackdriver-67440",
+    "storage_bucket": "trackdriver-67440.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231523129407:android:fad32e233710037b26808a",
+        "android_client_info": {
+          "package_name": "com.example.bus_track_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvqfyyaKxJixZgfCn9YeHn9WkSGcw59Ts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -110,7 +110,7 @@ class _LeaveMessageState extends State<LeaveMessage> {
               }
             },
             style: ElevatedButton.styleFrom(
-              primary: Colors.purple[400],
+              backgroundColor: Colors.purple[400],
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0),
               ),

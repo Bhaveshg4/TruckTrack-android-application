@@ -59,7 +59,7 @@ class EmergencyServices extends StatelessWidget {
                 // For example, triggering an alarm
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.red,
+                backgroundColor: Colors.red,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -153,7 +153,7 @@ class SOSEmergencyPage extends StatelessWidget {
                 // For example, contacting emergency services
               },
               style: ElevatedButton.styleFrom(
-                primary: const Color.fromARGB(255, 236, 128, 121),
+                backgroundColor: const Color.fromARGB(255, 236, 128, 121),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -212,7 +212,7 @@ class ContactCompanyPage extends StatelessWidget {
                 // For example, initiating a video call
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.blue,
+                backgroundColor: Colors.blue,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
