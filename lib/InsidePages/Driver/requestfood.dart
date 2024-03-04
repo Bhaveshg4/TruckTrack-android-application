@@ -30,9 +30,9 @@ class _RequestFoodState extends State<RequestFood> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             mealOption(MealType.Breakfast, "Breakfast", Icons.wb_sunny),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             mealOption(MealType.Lunch, "Lunch", Icons.free_breakfast),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             mealOption(MealType.Dinner, "Dinner", Icons.nights_stay),
           ],
         ),
@@ -59,12 +59,12 @@ class _RequestFoodState extends State<RequestFood> {
                     color: Colors.black.withOpacity(0.3),
                     spreadRadius: 2,
                     blurRadius: 5,
-                    offset: Offset(0, 3),
+                    offset: const Offset(0, 3),
                   ),
                 ]
               : [],
         ),
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

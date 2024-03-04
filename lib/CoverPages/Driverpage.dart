@@ -115,7 +115,7 @@ class Driverpage extends StatelessWidget {
                   ),
                   buildGridItem(
                     imagePath: "assets/food.jpeg",
-                    text: "Request meal",
+                    text: "Our Services",
                     onTap: () {
                       Navigator.push(
                           context,

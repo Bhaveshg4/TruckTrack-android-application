@@ -40,6 +40,10 @@ dependencies:
   cloud_firestore: ^4.15.5
   shimmer: ^3.0.0
   firebase_auth:
+  google_maps_flutter: ^2.5.3
+  location: 
+
+  upi_india: ^3.0.1
 
 
 dev_dependencies:

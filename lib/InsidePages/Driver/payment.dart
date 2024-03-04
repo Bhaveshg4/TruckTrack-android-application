@@ -1,3 +1,4 @@
+import 'package:bus_track_1/InsidePages/Driver/paymentgateway.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -57,7 +58,8 @@ class Payment extends StatelessWidget {
             ScaleAnimation(
               child: ShimmerButton(
                 onPressed: () {
-                  // Add your UPI payment logic here
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => PaymentHome()));
                 },
                 text: "Proceed to Payment",
               ),

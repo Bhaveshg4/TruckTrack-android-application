@@ -1,3 +1,4 @@
+import 'package:bus_track_1/InsidePages/Company/Map.dart';
 import 'package:flutter/material.dart';
 
 class Track extends StatefulWidget {
@@ -8,25 +9,28 @@ class Track extends StatefulWidget {
 }
 
 class _TrackState extends State<Track> {
-  String lastUpdate = "10 mins ago"; // Example initial value
+  String lastUpdate = "10 mins ago";
+  String truckLocation = "City Center";
 
   void _updateLocation() {
     // Simulated location update logic
     setState(() {
       lastUpdate = "Just now";
+      // Simulated dynamic location information
+      truckLocation = "RCOEM, Nagpur";
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purple[100],
+      backgroundColor: Colors.purple, // Updated background color
       appBar: AppBar(
         title: const Text(
           "Track Vehicle",
-          style: TextStyle(color: Color.fromARGB(255, 240, 233, 241)),
+          style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.purple[400],
+        backgroundColor: Colors.purpleAccent, // Updated app bar color
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -38,40 +42,54 @@ class _TrackState extends State<Track> {
               height: 200,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Colors.grey[300],
+                color: Colors.purpleAccent, // Updated container color
                 borderRadius: BorderRadius.circular(15),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.purpleAccent.withOpacity(0.5),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
               ),
-              child: Center(
+              child: const Center(
                 child: Icon(
                   Icons.local_shipping,
                   size: 80,
-                  color: Colors.purple[400],
+                  color: Color.fromARGB(255, 34, 33, 34),
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text(
-              "Truck Location", // Replace with dynamic location information
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              "Truck Location: $truckLocation",
+              style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
-              "Last Updated: $lastUpdate", // Display dynamic time information
-              style: TextStyle(fontSize: 16),
+              "Last Updated: $lastUpdate",
+              style: const TextStyle(fontSize: 16, color: Colors.grey),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                // Implement navigation to detailed tracking page
+                // Navigate to MapPage
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => LiveLocationMap()));
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.purple[400],
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+                backgroundColor: Colors.purpleAccent,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(30),
                 ),
               ),
-              child: Row(
+              child: const Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Icon(Icons.location_on, size: 24, color: Colors.white),
@@ -83,17 +101,18 @@ class _TrackState extends State<Track> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _updateLocation,
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+                backgroundColor: Colors.purpleAccent,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(30),
                 ),
               ),
-              child: Row(
+              child: const Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Icon(Icons.refresh, size: 24, color: Colors.white),
@@ -105,19 +124,20 @@ class _TrackState extends State<Track> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 // Implement additional action
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.orange,
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(30),
                 ),
               ),
-              child: Row(
+              child: const Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Icon(Icons.info, size: 24, color: Colors.white),
@@ -129,15 +149,12 @@ class _TrackState extends State<Track> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
-            Divider(
+            const SizedBox(height: 20),
+            const Divider(
               height: 1,
               color: Colors.grey,
             ),
-            SizedBox(height: 20),
-            // Add more features/widgets here
-            // Example: Text("Additional Information", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            //          YourAdditionalWidget(),
+            const SizedBox(height: 20),
           ],
         ),
       ),
